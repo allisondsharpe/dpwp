@@ -26,4 +26,24 @@ else:
 	print name + " will need a parent/care-taker in order to go to the store."	
 
 
+#Story(Cont.)
+print name + " went to the store to purchase some candy." " Each piece costs $5."	
+	
+		
+#Function 1
+def total(a, b): #my two parameters
+    candy = a + b #Math Operator
+    return candy #returns function
+
+x = total(5, 5);
+print "$" + str(x) + " is your total amount."		
+
+
+#Conditional Statement 2
+if number == "1":
+	print "Let's go to the zoo!"
+if number == "2":
+	print "Let's go to the zoo!"
+else: 
+	pass			
 
