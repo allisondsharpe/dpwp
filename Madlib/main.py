@@ -79,6 +79,6 @@ print "Now it's time to play some video games. My favorite video game and charac
 
  
 #For Loop
-print "Well, " + name + ", Thank you for your time. Now let's countdown.."
+print "Well, " + name + ", Today was a fun day. Now let's countdown to midnight.."
 for i in reversed(xrange(11)): #for loop reversed for countdown
     print i       
