@@ -15,6 +15,7 @@ age = raw_input("Enter your age:") #enters age
 year = raw_input("Enter the current year:") #enters current year
 number = raw_input("List a number from 1-2:") #enters a number from 1-2
 
+
 #Story
 print "Hello," + name + " and welcome to my Madlib! It says here that you were born" + birthdate + " and that you are currently" + age + " years old. It is now" + year + " and you want nothing more than to go spend your day at the town. Let's begin our journey, shall we?" 
 
@@ -73,4 +74,7 @@ dict = {"Farcry 3": "Vaas Montenegro"}
 print "Now it's time to play some video games. My favorite game and character is " + str(dict)
 
  
-    
+#For Loop
+print "Well," + name + ", Thank you for your time. Now let's countdown.."
+for i in reversed(xrange(11)): #for loop reversed for countdown
+    print i       
