@@ -68,3 +68,9 @@ actors = ["Johnny Depp", "Heath Ledger", "Ann Hathaway", "James Franco"]
 print "How about now we watch some movies? Particularly ones that involve " + str(actors)
 
 
+#Dictionary
+dict = {"Farcry 3": "Vaas Montenegro"} 
+print "Now it's time to play some video games. My favorite game and character is " + str(dict)
+
+ 
+    
