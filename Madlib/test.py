@@ -32,36 +32,48 @@ def begin():
  	print "You may believe you are the only one on this journey, but fortunately you are not. There is a tribe called the" + tribe + " tribe. They have a leader who will train you to become a powerful warrior. Here is what you need to know about her: Name: " + dict['Name'] + " Age: " + str(dict['Age']) + " Rank: " + dict['Rank'] 
  
  
- 	#Conditional Statement 1
  	print "It's now time for you to prepare in making your first purchase. In order to survive you will need the proper equiptment. You will need at least $50 in order to make a purchase and you will need to have $10 left over for savings." 
  	money = raw_input("How much money do you have on you at the moment?:") #the amount of cash you have in order to make purchases
  	print "To help you with your purchases, I am willing to offer you an amount of cash of your choosing."
  	extra_money = raw_input("How much money would you like for me to give you?")
  	
- 	
-def total(x, y):
+ 
+#Function 2 	
+def total(x, y): 
     totalAmount = int(money) - int(extra_money) #Math operator one
     return totalAmount
 total(money, extra_money)
 
+
+#Conditional Statement 1
 if totalAmount > 50: 
 	print "You have enough money to make a purchase."
 else: 
 	print "You cannot purchase any weapons at this time."	
 	
-	
-	#Conditional Statement 2	
+		
 	print "Great. Now it's time to make a purchase. Use the cash that I gave you to make this purchase. Be careful not to exceed your budget. Remember, you should have at least $10 left over for safe keeping." 
 	cost = raw_input("List an estimated price for each weapon:") #this is an estimated price for each weapon
 	left = raw_input("How much money will you have left after this transasction?") #this is the amount of money you will have left over
-	if money > cost and left >= 10: #Math operator two
-		print "Thank you for your purchase. You may now proceed."
-	else:
-		print "Sorry, you have insufficient funds."	
+
+
+#Function 3	
+def total2(x, y):
+	totalAmount2 = int(extra_money) - int(cost) #Math operator two
+	return totalAmount2
+total2(extra_money, cost)
+	
+	
+#Conditional Statement 2	
+if money > cost and left >= 10: 
+	print "Thank you for your purchase. You may now proceed."
+else:
+	print "Sorry, you have insufficient funds."	
     
- 	
- 	#For Loop
- 	#for i in reversed(xrange(11)): #for loop used for countdown
- 			#print "Well," + name + " It looks like that my work here is done. You now have what it takes to survive the jungle on your own. Countdown in.."
-    		#print i
+ 
+#For Loop
+print "Well," + name + " It looks like that my work here is done. You now have what it takes to survive the jungle on your own. Countdown in.."
+for i in reversed(xrange(11)): #for loop used for countdown
+    print i
+    
 begin()	
