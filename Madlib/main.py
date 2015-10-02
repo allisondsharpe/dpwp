@@ -20,8 +20,8 @@ number = raw_input("List a number from 1-2:") #enters a number from 1-2
 print "Hello," + name + " and welcome to my Madlib! It says here that you were born" + birthdate + " and that you are currently" + age + " years old. It is now" + year + " and you want nothing more than to go spend your day at the town. Let's begin our journey, shall we?" 
 
 
-#Conditional Statement 1 
-if age > 18 or age < 80:
+#Conditional Statement 1  
+if age > 18 and age < 80: #logical operator
 	print name + " will go to the store without guidance." 
 else:
 	print name + " will need a parent/care-taker in order to go to the store."	
