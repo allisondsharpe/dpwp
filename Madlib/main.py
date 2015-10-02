@@ -59,5 +59,12 @@ x = total(5, 6);
 print "$" + str(x) + " is your total amount."	
    
    
-
+#Story(Cont.)    
+print "Whew. That was fun. Now let's go back home. You said your favorite activity was" + activity + ". That does sound like fun, but let's do that another time."
     
+    
+#Array
+actors = ["Johnny Depp", "Heath Ledger", "Ann Hathaway", "James Franco"]
+print "How about now we watch some movies? Particularly ones that involve " + str(actors)
+
+
