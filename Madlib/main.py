@@ -19,7 +19,7 @@ number = raw_input("List a number from 1-2:") #Enters a number from 1-2
 
 
 #Story(Beginning)
-print "Hello, " + name + " and welcome to my Madlib! It says here that you were born in " + birthdate + " and that you are currently " + age + " years old. It is now " + year + " and you want nothing more than to go spend your day at the town. Let's begin our journey, shall we?" 
+print "Narrator: Hello, " + name + " and welcome to my Madlib! It says here that you were born in " + birthdate + " and that you are currently " + age + " years old. It is now " + year + " and you want nothing more than to go spend your day at the town. Let's begin our journey, shall we? First we should stop by the store and purchase some yummy candy." 
 
 
 #Conditional Statement 1  
@@ -44,15 +44,15 @@ print "$" + str(x) + " is your total amount all together."
 
 #Conditional Statement 2
 if number == "1": #If user enters the number "1"
-	print "The zoo sounds like fun. Let's go!"
+	print "Narrator: The zoo sounds like fun. Let's go!"
 if number == "2": #If user enters the number "2" 
-	print "The zoo sounds like fun. Let's go!"
+	print "Narrator: The zoo sounds like fun. Let's go!"
 else: 
-	print "Goodbye." #User will receive a "goodbye" message if entered any other number except 1 or 2			
+	print "Narrator: Goodbye." #User will receive a "goodbye" message if entered any other number except 1 or 2			
 
 
 #Story(Cont.)
-print "So, " + name + " have you ever been to the zoo before? You said your favorite animal was a " + animal + ". The zoo probably has them here. Let's go buy a drink and a snack first. A drink costs $5 and a snack costs $6."
+print "Narrator: So, " + name + " have you ever been to the zoo before? You said your favorite animal was a " + animal + ". The zoo probably has them here. Let's go buy a drink and a snack first. A drink costs $5 and a snack costs $6."
 
 
 #Function 2
@@ -65,20 +65,20 @@ print "$" + str(x) + " is your total amount all together."
    
    
 #Story(Cont.)    
-print "Whew. That was fun. Now let's go back home. You said your favorite activity was " + activity + ". That does sound like fun, but let's do that another time."
+print "Narrator: Whew. That was fun. Now let's go back home. You said your favorite activity was " + activity + ". That does sound like fun, but let's do that another time."
     
     
 #Array
 actors = ["Johnny Depp", "Heath Ledger", "Ann Hathaway", "James Franco"]
-print "How about now we watch some movies? Particularly ones that involve " + str(actors) + '.'
+print "Narrator: How about now we watch some movies? Particularly ones that involve " + str(actors) + '.'
 
 
 #Dictionary
 dict = {"Farcry 3": "Vaas Montenegro"} 
-print "Now it's time to play some video games. My favorite video game and character is " + str(dict) + '.'
+print "Narrator: Now it's time to play some video games. My favorite video game and character is " + str(dict) + '.'
 
  
 #For Loop
-print "Well, " + name + ", Today was a fun day. Now let's countdown to midnight.."
+print "Narrator: Well, " + name + ", Today was a fun day. Now let's countdown to midnight.."
 for i in reversed(xrange(11)): #for loop reversed for countdown
     print i       
