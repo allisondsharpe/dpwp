@@ -33,28 +33,35 @@ def begin():
  
  
  	#Conditional Statement 1
- 	print "It's now time for you to make your first purchase. In order to survive you will need the proper equiptment. You will need at least $50 in order to make a purchase." 
+ 	print "It's now time for you to prepare in making your first purchase. In order to survive you will need the proper equiptment. You will need at least $50 in order to make a purchase and you will need to have $10 left over for savings." 
  	money = raw_input("How much money do you have on you at the moment?:") #the amount of cash you have in order to make purchases
- 	print "Here is $20 for you to add to your amount."
- 	extra_money = raw_input("How much money do you have all together?")
-	if int(money) * int(extra_money) > 50: #Math operator one
-		print "You have enough money to make a purchase."
-	else: 
-		print "You cannot purchase any weapons at this time."	
+ 	print "To help you with your purchases, I am willing to offer you an amount of cash of your choosing."
+ 	extra_money = raw_input("How much money would you like for me to give you?")
+ 	
+ 	
+def total(x, y):
+    totalAmount = int(money) - int(extra_money) #Math operator one
+    return totalAmount
+total(money, extra_money)
+
+if totalAmount > 50: 
+	print "You have enough money to make a purchase."
+else: 
+	print "You cannot purchase any weapons at this time."	
 	
 	
 	#Conditional Statement 2	
-	print "Great. Now it's time to make a purchase. Be careful not to exceed your budget. You will need to have at least $10 left over for safe keeping." 
+	print "Great. Now it's time to make a purchase. Use the cash that I gave you to make this purchase. Be careful not to exceed your budget. Remember, you should have at least $10 left over for safe keeping." 
 	cost = raw_input("List an estimated price for each weapon:") #this is an estimated price for each weapon
 	left = raw_input("How much money will you have left after this transasction?") #this is the amount of money you will have left over
-	if cost < money and left >= 10: #Math operator two
+	if money > cost and left >= 10: #Math operator two
 		print "Thank you for your purchase. You may now proceed."
 	else:
 		print "Sorry, you have insufficient funds."	
     
  	
  	#For Loop
- 	for countdown in reversed(xrange(11)): #for loop used for countdown
- 			print "Well," + name + " It looks like that my work here is done. You now have what it takes to survive the jungle on your own. Countdown in.."
-    		print countdown
+ 	#for i in reversed(xrange(11)): #for loop used for countdown
+ 			#print "Well," + name + " It looks like that my work here is done. You now have what it takes to survive the jungle on your own. Countdown in.."
+    		#print i
 begin()	
