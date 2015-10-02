@@ -47,3 +47,17 @@ if number == "2":
 else: 
 	pass			
 
+print "So," + name + " have you ever been to the zoo before? You said your favorite animal was a" + animal + ". Let's go buy a drink and a snack. A drink costs $5 and a snack costs $6."
+
+
+#Function 2
+def total(a, b): #my two parameters
+    snack_beverage = a + b #Math Operator
+    return snack_beverage #returns function
+
+x = total(5, 6);
+print "$" + str(x) + " is your total amount."	
+   
+   
+
+    
