@@ -48,7 +48,9 @@ if number == "2":
 else: 
 	pass			
 
-print "So," + name + " have you ever been to the zoo before? You said your favorite animal was a" + animal + ". Let's go buy a drink and a snack. A drink costs $5 and a snack costs $6."
+
+#Story(Cont.)
+print "So," + name + " have you ever been to the zoo before? You said your favorite animal was a" + animal + ". The zoo probably has them here. Let's go buy a drink and a snack first. A drink costs $5 and a snack costs $6."
 
 
 #Function 2
