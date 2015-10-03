@@ -21,6 +21,9 @@ class MainHandler(webapp2.RequestHandler):
         yoda.profession = "Jedi Knight"
         yoda.age = 762
         yoda.home_planet = "Dagobah"
+        
+        chars = [luke, leia, yoda]
+        print chars[1].profession
 
 class Character(object):
 	def __init__(self): #constructor function
