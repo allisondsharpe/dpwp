@@ -23,7 +23,7 @@ class Button(object):
 		print "You've rolled over my button" + message	
 		
 	def show_label(self):
-		print "My label is " + self.label	       
+		print "My label is " + self.label      
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
