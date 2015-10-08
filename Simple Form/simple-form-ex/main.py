@@ -6,11 +6,11 @@ Assignment: Simple Form
 '''
 
 import webapp2
-from form import Page
+from form import Form
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = Page()
+        p = Form()
 
         if self.request.GET:
             name = self.request.GET['name']
@@ -19,9 +19,11 @@ class MainHandler(webapp2.RequestHandler):
             phone = self.request.GET['phone']
             sex = self.request.GET['sex']
             status = self.request.GET['status']
-            self.response.write(self.head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + ' ' + self.body + self.close)
+            self.response.write(page_head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + ' ' + page_body + page_close)
         else:
-            self.response.write(self.head + self.body + self.close)
+            self.response.write(page_head + page_body + page_close)
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
