@@ -9,23 +9,9 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        if self.request.GET:
-            name = self.request.GET['name']
-            email = self.request.GET['email']
-            address = self.request.GET['address']
-            phone = self.request.GET['phone']
-            sex = self.request.GET['sex']
-            status = self.request.GET['status']
-            self.response.write(self.head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + ' ' + self.body + self.close)
-        else:
-            self.response.write(self.head + self.body + self.close)
-
-class Page(object):
-    def __init__(self):
         self.title = "Welcome!"
         self.css = "css/style.css"
-        self.head = '''
-<!DOCTYPE HTML>
+        self.head = '''<!DOCTYPE HTML>
 <html>
     <head>
         <title>{self.title}</title>
@@ -56,6 +42,17 @@ class Page(object):
     </body>
 </html>
         '''
+
+        if self.request.GET:
+            name = self.request.GET['name']
+            email = self.request.GET['email']
+            address = self.request.GET['address']
+            phone = self.request.GET['phone']
+            sex = self.request.GET['sex']
+            status = self.request.GET['status']
+            self.response.write(self.head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + ' ' + self.body + self.close)
+        else:
+            self.response.write(self.head + self.body + self.close)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
