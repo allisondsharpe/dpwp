@@ -1,23 +1,15 @@
-'''
-Name: Allison Sharpe
-Date: 10/7/15
-Class: Design Patters for Web Programming
-Assignment: Simple Form
-'''
+class Page():
 
-class Page(object): #class Page() created for form
-    def __init__(self): #function for class Page()
-        self.title = "Sharpe's Inc." #title
-        self.css = "css/style.css" #css stylesheet
-        self.head = '''<!DOCTYPE HTML> <!-- html begins here -->
-<html>
-    <head>
-        <title>Sharpe's Inc. - Apply Today</title> <!-- Sharpe's Inc. is a made up company -->
-        <link href="{self.css}" rel="Stylesheet" type="text/css" /> <!-- link to my stylesheet -->
-    </head>
-    <body>
-        '''
-        self.body = '''<form method="GET">
+    def __init__(self, main):
+        self.head = '''<!DOCTYPE HTML>
+        <html>
+            <head>
+                <title>Simple Form</title>
+                <link href="style.css" type="text/css" rel="stylesheet" />
+            </head>
+            <body>
+            '''
+            self.body = '''<form method="GET">
             <h1> Sharpe's Inc. Application Form </h1> <!-- header -->
             <p> Fill out the form below to get started. </p>
             <label>Name:</label><input type="text" name="name" class="fields"/><br/><br/> <!-- collects name of user -->
@@ -34,16 +26,24 @@ class Page(object): #class Page() created for form
                 <input type="radio" name="relocate" value="Yes" checked> Yes
                 <input type="radio" name="relocate" value="No" checked> No <br/><br/>
             </label>
-            <a href="../new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->'''
-        self.close = '''
-        </form>
-    </body>
-</html>
+            <a href="../new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->
         '''
 
+        self.close = '''
+            </body>
+        </html>
+            '''
 
-    def print_out(self):
-        all = self.head + self.body + self.close #retrieves self.head, self.body, and self.close from html
-        all = all.format(**locals())
-        return all #returns variable 'all'
+        #main_self is SCOPED to __init__
+        main.response.write("blablabablal")
 
+    def print_contents(self, i=''):
+        if i=='':
+            return self.head + self.body + self.close + self.ender
+        else:
+            return self.head + i + self.close
+
+class Button():
+    def __init__(self):
+        self.label = "Contact"
+        self.size = 100
