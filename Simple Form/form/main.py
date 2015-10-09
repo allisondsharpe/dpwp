@@ -11,6 +11,7 @@ from pages import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
+        self.response.write(p.print_out())
 
         if self.request.GET:
             name = self.request.GET['name']
@@ -19,9 +20,9 @@ class MainHandler(webapp2.RequestHandler):
             phone = self.request.GET['phone']
             sex = self.request.GET['sex']
             status = self.request.GET['status']
-            self.response.write(self.head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + ' ' + self.body + self.close)
+            self.response.write(p.head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + p.body + p.close)
         else:
-            self.response.write(self.head + self.body + self.close)
+            pass
 
 app = webapp2.WSGIApplication([
     (r'/', MainHandler),
