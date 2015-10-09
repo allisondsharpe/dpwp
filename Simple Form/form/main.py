@@ -6,25 +6,24 @@ Assignment: Simple Form
 '''
 
 import webapp2
-from pages import Page
+from pages import Page #imports class Page()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = Page()
-        self.response.write(p.print_out())
+        p = Page() #variable for Page()
+        self.response.write(p.print_out()) #prints out function "print_out" in class Page()
 
-        if self.request.GET:
+        if self.request.GET: #retrieves information from Page() to print to browser
             name = self.request.GET['name']
             email = self.request.GET['email']
             address = self.request.GET['address']
             phone = self.request.GET['phone']
-            sex = self.request.GET['sex']
-            status = self.request.GET['status']
-            self.response.write(p.head + name + ' ' + email + ' ' + address + ' ' + phone + ' ' + sex + ' ' + status + p.body + p.close)
+            shipping = self.request.GET['shipping']
+            dept = self.request.GET['dept']
+            self.response.write(name + ' ' + email + ' ' + address + ' ' + phone + ' ' + shipping + ' ' + dept) #prints out results to browser
         else:
             pass
 
 app = webapp2.WSGIApplication([
-    (r'/', MainHandler),
-    (r'/pages', Page)],
+    (r'/', MainHandler)],
     debug=True)

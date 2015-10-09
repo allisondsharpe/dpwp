@@ -1,3 +1,30 @@
+/* body elements */
 body {
-    background-color: #eee;
-} 
+    background-image: url("images/bg.jpg");
+}
+
+/* h1 elements */
+h1 {
+    font-weight: 200;
+    text-align: center;
+}
+
+/* form elements */
+form {
+    border: 1px solid;
+    border-radius: 0.5em;
+    padding: 20px;
+    margin-left: 550px;
+    margin-right: 550px;
+}
+
+/* fields class elements */
+.fields {
+    float: right;
+    margin-right: 30px;
+}
+
+/* submit id elements */
+#submit {
+    margin-left: 90px;
+}
