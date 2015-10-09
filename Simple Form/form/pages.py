@@ -12,7 +12,7 @@ class Page(object):
         self.head = '''<!DOCTYPE HTML>
 <html>
     <head>
-        <title>Sharpe's Supplies - Apply Today</title> <!-- Sharpe's Supplies is a made up company that sells supplies -->
+        <title>Sharpe's Inc. - Apply Today</title> <!-- Sharpe's Inc. is a made up company -->
         <link href="{self.css}" rel="Stylesheet" type="text/css" /> <!-- link to my stylesheet -->
     </head>
     <body>
@@ -26,17 +26,15 @@ class Page(object):
             <label>Email:</label><input type="text" name="email" class="fields"/><br/><br/> <!-- collects email of user -->
             <label>Address:</label><input type="text" name="address" class="fields"/><br/><br/> <!-- collects address of user -->
             <label>Phone:</label><input type="text" name="phone" class="fields" /><br/><br/> <!-- collects phone number of user -->
-            <label>Supply Dept: <!-- select options for supply department -->
+            <label>Job Dept: <!-- select options for job department -->
                 <select name="dept">
-                    <option value="home">Home</option>
-                    <option value="office">Office</option>
-                    <option value="kitchen">Kitchen</option>
-                    <option value="outdoor">Outdoor</option>
+                    <option value="head">Headquarters</option>
+                    <option value="office">Distribution Centers</option>
                 </select><br/><br/>
             </label>
-            <label>Shipping: <!-- radio option for shipping -->
-                <input type="radio" name="shipping" value="delivered" checked>Delivered
-                <input type="radio" name="shipping" value="pickup" checked>Pick-up<br/><br/>
+            <label>Would you be willing to relocate if required? <!-- radio option for relocation -->
+                <input type="radio" name="relocate" value="delivered" checked> Yes
+                <input type="radio" name="relocate" value="pickup" checked> No <br/><br/>
             </label>
             <a href="new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->'''
         self.close = '''

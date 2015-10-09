@@ -18,9 +18,9 @@ class MainHandler(webapp2.RequestHandler):
             email = self.request.GET['email']
             address = self.request.GET['address']
             phone = self.request.GET['phone']
-            shipping = self.request.GET['shipping']
+            relocation = self.request.GET['relocation']
             dept = self.request.GET['dept']
-            self.response.write(name + ' ' + email + ' ' + address + ' ' + phone + ' ' + shipping + ' ' + dept) #prints out results to browser
+            self.response.write(name + ' ' + email + ' ' + address + ' ' + phone + ' ' + dept + ' ' + relocation) #prints out results to browser
         else:
             pass
 
