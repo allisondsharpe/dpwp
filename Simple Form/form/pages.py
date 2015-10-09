@@ -38,7 +38,7 @@ class Page(object):
                 <input type="radio" name="shipping" value="delivered" checked>Delivered
                 <input type="radio" name="shipping" value="pickup" checked>Pick-up<br/><br/>
             </label>
-            <a target="_blank"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->'''
+            <a href="new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->'''
         self.close = '''
         </form>
     </body>
