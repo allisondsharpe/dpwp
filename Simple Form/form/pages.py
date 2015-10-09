@@ -5,11 +5,11 @@ Class: Design Patters for Web Programming
 Assignment: Simple Form
 '''
 
-class Page(object):
-    def __init__(self):
-        self.title = "Welcome!"
-        self.css = "css/style.css"
-        self.head = '''<!DOCTYPE HTML>
+class Page(object): #class Page() created for form
+    def __init__(self): #function for class Page()
+        self.title = "Sharpe's Inc." #title
+        self.css = "css/style.css" #css stylesheet
+        self.head = '''<!DOCTYPE HTML> <!-- html begins here -->
 <html>
     <head>
         <title>Sharpe's Inc. - Apply Today</title> <!-- Sharpe's Inc. is a made up company -->
@@ -17,11 +17,9 @@ class Page(object):
     </head>
     <body>
         '''
-        self.body = '''
-
-        <h1> Welcome to Sharpe's Supplies </h1> <!-- header -->
-
-        <form method="GET">
+        self.body = '''<form method="GET">
+            <h1> Sharpe's Inc. Application Form </h1> <!-- header -->
+            <p> Fill out the form below to get started. </p>
             <label>Name:</label><input type="text" name="name" class="fields"/><br/><br/> <!-- collects name of user -->
             <label>Email:</label><input type="text" name="email" class="fields"/><br/><br/> <!-- collects email of user -->
             <label>Address:</label><input type="text" name="address" class="fields"/><br/><br/> <!-- collects address of user -->
@@ -36,7 +34,7 @@ class Page(object):
                 <input type="radio" name="relocate" value="delivered" checked> Yes
                 <input type="radio" name="relocate" value="pickup" checked> No <br/><br/>
             </label>
-            <a href="new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->'''
+            <a href="../new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->'''
         self.close = '''
         </form>
     </body>
@@ -46,5 +44,5 @@ class Page(object):
     def print_out(self):
         all = self.head + self.body + self.close #retrieves self.head, self.body, and self.close from html
         all = all.format(**locals())
-        return all
+        return all #returns variable 'all'
 

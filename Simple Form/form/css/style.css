@@ -7,16 +7,29 @@ body {
 h1 {
     font-weight: 200;
     text-align: center;
+    color: #666;
+}
+
+/* paragraph & label elements */
+p, label {
+    font-weight: 100;
+    text-align: center;
+    color: #666;
 }
 
 /* form elements */
 form {
-    border: 1px solid;
+    border: 1px solid #eee;
     border-radius: 0.5em;
     padding: 20px;
     margin-left: 550px;
     margin-right: 550px;
     background-color: #eee;
+}
+
+/* a elements */
+a {
+    text-decoration: none;
 }
 
 /* fields class elements */
