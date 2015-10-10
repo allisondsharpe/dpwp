@@ -8,7 +8,7 @@ Assignment: Simple Form
 class Page(): #class for Page()
     def __init__(self, page_main): #instances set for class Page()
         self.css = "css/style.css" #css stylesheet
-        self.head = '''<!DOCTYPE HTML> <!-- inserts html -->
+        self.head = '''<!DOCTYPE HTML> <!-- self.head/html insertion -->
         <html>
             <head> <!-- header tag -->
                 <title>Sharpe's Inc. - Apply Today</title> <!-- Sharpe's Inc. is a made up company -->
@@ -16,7 +16,7 @@ class Page(): #class for Page()
             </head>
             <body>
             '''
-        self.body = '''
+        self.body = ''' <!-- self.body -->
         		<form method="GET">
             		<h1> Sharpe's Inc. Application Form </h1> <!-- main header -->
             		<p> Fill out the form below to get started. </p>
@@ -34,16 +34,19 @@ class Page(): #class for Page()
                 		<input type="radio" name="relocate" value="Yes" checked> Yes
                 		<input type="radio" name="relocate" value="No" checked> No <br/><br/>
             		</label>
-            		<a href="../new-page.py"><input type="submit" id="submit" value="Submit"></a> <!-- submit button for form -->
+            		<input type="submit" value="Submit"> <!-- submit button for form -->
             	</form>	'''
-        self.close = '''
+        self.close = ''' <!-- self.close -->
             </body>
         </html>
         	'''
 
-    def print_info(self, i=''):
+    def print_info(self, i=''): #prints information to browser
         if i=='':
-            return self.head + self.body + self.close
+            all = self.head + self.body + self.close #retrieves self.head, self.body, and self.close from html
+            all = all.format(**locals()) #enables css
+            return all #returns variable all
+
         else:
-            return self.head + i + self.close
+            return self.head + i + self.close #returns variables in order to print information to new browser
 
