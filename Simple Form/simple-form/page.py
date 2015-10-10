@@ -5,48 +5,47 @@ Class: Design Patters for Web Programming
 Assignment: Simple Form
 '''
 
-class Page(): #class for Page()
-    def __init__(self, page_main): #instances set for class Page()
-        self.css = "css/style.css" #css stylesheet
-        self.head = '''<!DOCTYPE HTML> <!-- self.head/html insertion -->
+class Page(): #Class for Page()
+    def __init__(self, page_main): #Instances set for class Page()
+        self.css = "css/style.css" #CSS stylesheet for Page()
+        self.head = '''<!DOCTYPE HTML> <!-- Head of the page -->
         <html>
-            <head> <!-- header tag -->
-                <title>Sharpe's Inc. - Apply Today</title> <!-- Sharpe's Inc. is a made up company -->
-       			<link href="{self.css}" rel="stylesheet" type="text/css" /> <!-- link to my stylesheet -->
+            <head> <!-- Head tag -->
+                <title>Sharpe's Inc. - Apply Today</title> <!-- Title for Sharpe's Inc./Sharpe's Inc. is a made up company -->
+       			<link href="{self.css}" rel="stylesheet" type="text/css" /> <!-- Link to my stylesheet in the head tag -->
             </head>
             <body>
             '''
-        self.body = ''' <!-- self.body -->
+        self.body = ''' <!-- Body of the page -->
         		<form method="GET">
-            		<h1> Sharpe's Inc. Application Form </h1> <!-- main header -->
-            		<p> Fill out the form below to get started. </p>
-            		<label>Name:</label><input type="text" name="name" class="fields"/><br/><br/> <!-- collects name of user -->
-            		<label>Email:</label><input type="text" name="email" class="fields"/><br/><br/> <!-- collects email of user -->
-            		<label>Address:</label><input type="text" name="address" class="fields"/><br/><br/> <!-- collects address of user -->
-            		<label>Phone:</label><input type="text" name="phone" class="fields" /><br/><br/> <!-- collects phone number of user -->
-            		<label>Job Dept: <!-- select options for job department -->
+            		<h1> Sharpe's Inc. Application Form </h1> <!-- Main header for Sharpe's Inc. -->
+            		<p> Fill out the form below to get started. </p> <!-- Paragraph displayed underneath header and above form -->
+            		<label>Name:</label><input type="text" name="name" class="fields"/><br/><br/> <!-- Collects name from user -->
+            		<label>Email:</label><input type="text" name="email" class="fields"/><br/><br/> <!-- Collects email from user -->
+            		<label>Address:</label><input type="text" name="address" class="fields"/><br/><br/> <!-- Collects address from user -->
+            		<label>Phone:</label><input type="text" name="phone" class="fields" /><br/><br/> <!-- Collects phone number from user -->
+            		<label>Job Dept: <!-- Select options for the job department -->
                 	<select name="dept">
                     	<option value="Headquarters">Headquarters</option>
                     	<option value="Distribution">Distribution Centers</option>
                 	</select><br/><br/>
            	 		</label>
-            		<label>Would you be willing to relocate if required? <!-- radio option for relocation -->
+            		<label>Would you be willing to relocate if required? <!-- Radio option for relocation -->
                 		<input type="radio" name="relocate" value="Yes" checked> Yes
                 		<input type="radio" name="relocate" value="No" checked> No <br/><br/>
             		</label>
-            		<input type="submit" id="submit" value="Submit"> <!-- submit button for form -->
+            		<input type="submit" id="submit" value="Submit"> <!-- Submit button for the form -->
             	</form>	'''
-        self.close = ''' <!-- self.close -->
+        self.close = ''' <!-- Footer of the page -->
             </body>
         </html>
         	'''
 
-    def print_info(self, i=''): #prints information to browser
-        if i=='':
-            all = self.head + self.body + self.close #retrieves self.head, self.body, and self.close from html
-            all = all.format(**locals()) #enables css
-            return all #returns variable all
-
+    def print_info(self, x=''): #Prints information to browser
+        if x=='':
+            all = self.head + self.body + self.close #Retrieves self.head, self.body, and self.close from the html
+            all = all.format(**locals()) #Enables css
+            return all #Returns variable all
         else:
-            return self.head + i + self.close #returns variables in order to print information to new browser
+            return self.head + x + self.close #Returns variables in order to print information to new browser
 

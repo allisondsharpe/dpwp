@@ -5,26 +5,26 @@ Class: Design Patters for Web Programming
 Assignment: Simple Form
 */
 
-/* body elements */
+/* Body elements */
 body {
     background: url("images/bg.jpg") no-repeat;
 }
 
-/* h1 elements */
+/* H1 elements */
 h1 {
     font-weight: 200;
     text-align: center;
     color: #666;
 }
 
-/* paragraph & label elements */
+/* Paragraph & label elements */
 p, label {
     font-weight: 100;
     text-align: center;
     color: #666;
 }
 
-/* form elements */
+/* Form elements */
 form {
     border: 1px solid #eee;
     border-radius: 0.5em;
@@ -34,22 +34,26 @@ form {
     background-color: #eee;
 }
 
-/* a elements */
+/* A elements */
 a {
     text-decoration: none;
 }
 
-/* fields class elements */
+/* Fields class elements */
 .fields {
     float: right;
     margin-right: 30px;
 }
 
-/* submit id elements */
+/* Submit id elements */
 #submit {
     margin-left: 90px;
 }
 
-data {
-    text-align: center;
+/* Submit id & fields class hover elements */
+#submit:hover, .fields:hover {
+    background: #ccc;
+    color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 0.5em;
 }
