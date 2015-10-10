@@ -9,7 +9,7 @@ import webapp2 #Imports webapp2 for MainHandler() to work
 from page import Page #Imports class Page()
 
 class MainHandler(webapp2.RequestHandler): #Official MainHandler class
-    def get(self):    
+    def get(self):
 
         if self.request.GET: #GET delivers the variables to the page
             page = Page(self)  #Retrieves Page()
