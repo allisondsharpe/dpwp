@@ -1,0 +1,51 @@
+/*
+Name: Allison Sharpe
+Date: 10/7/15
+Class: Design Patters for Web Programming
+Assignment: Simple Form
+*/
+
+/* body elements */
+body {
+    background: url("images/bg.jpg") no-repeat;
+}
+
+/* h1 elements */
+h1 {
+    font-weight: 200;
+    text-align: center;
+    color: #666;
+}
+
+/* paragraph & label elements */
+p, label {
+    font-weight: 100;
+    text-align: center;
+    color: #666;
+}
+
+/* form elements */
+form {
+    border: 1px solid #eee;
+    border-radius: 0.5em;
+    padding: 20px;
+    margin-left: 550px;
+    margin-right: 550px;
+    background-color: #eee;
+}
+
+/* a elements */
+a {
+    text-decoration: none;
+}
+
+/* fields class elements */
+.fields {
+    float: right;
+    margin-right: 30px;
+}
+
+/* submit id elements */
+#submit {
+    margin-left: 90px;
+}
