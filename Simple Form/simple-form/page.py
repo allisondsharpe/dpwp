@@ -34,7 +34,7 @@ class Page(): #class for Page()
                 		<input type="radio" name="relocate" value="Yes" checked> Yes
                 		<input type="radio" name="relocate" value="No" checked> No <br/><br/>
             		</label>
-            		<input type="submit" value="Submit"> <!-- submit button for form -->
+            		<input type="submit" id="submit" value="Submit"> <!-- submit button for form -->
             	</form>	'''
         self.close = ''' <!-- self.close -->
             </body>
