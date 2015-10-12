@@ -1,37 +1,34 @@
+'''
+Name: Allison Sharpe
+Date: 10-12-15
+Class: Design Patterns for Web Programming
+Assignment: Reusable Library
+'''
+
 import webapp2
-from library import MovieData, FavoriteMovies
-from pages import Page
+from lib import Scores
+from page import Page
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 
-        #page for class
-        p = Page()
-        lib = FavoriteMovies()
+        #Jason's scores
+        j = Scores()
+        j.score1 = 50
+        j.score2 = 30
+        j.score3 = 65
+        j.score4 = 80
+        j.final_score = 95
+        self.response.write("Jason's final score is " + str(j.final_score))
 
-        #movie title
-        #year movie was made
-        #director of the file
-        md1 = MovieData()
-        md1.title = "The Princess Bride"
-        md1.year = 1989 #actually calling a function
-        md1.director = "Rob Reiner"
-        lib.add_movie(md1)
-
-        md2 = MovieData()
-        md2.title = "Dune"
-        md2.year = 1986 #actually calling a function
-        md2.director = "David Lynch"
-        lib.add_movie(md2)
-
-        md2 = MovieData()
-        md2.title = "Star Wars"
-        md2.year = 1977 #actually calling a function
-        md2.director = "George Lucas"
-        lib.add_movie(md2)
-
-        p.body = lib.compile_list() + lib.calc_time_span()
-        self.response.write(p.print_out())
+        #Vaas' scores
+        v = Scores()
+        v.score1 = 20
+        v.score2 = 45
+        v.score3 = 60
+        v.score4 = 75
+        v.final_score = 80
+        self.response.write("<br /> Vaas' final score is " + str(v.final_score))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
