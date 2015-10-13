@@ -5,10 +5,13 @@ Class: Design Patterns for Web Programming
 Assignment: Reusable Library
 '''
 
+from lib import Scores
+
+
 class Page(object):
     def __init__(self):
         self.__title = "Welcome!"
-        self.css = "css/styles.css"
+        self.css = "css/style.css"
         self.__head = """
 <!DOCTYPE HTML>
 <html>
