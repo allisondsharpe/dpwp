@@ -6,29 +6,42 @@ Assignment: Reusable Library
 '''
 
 import webapp2
-from lib import Scores, ScoreData
+from lib import Students, StudentData
 from page import ResultsPage, FormPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        sd = StudentData() #Instance of ScoreData()
+        rp = ResultsPage() #Instance of ResultsPage
 
-        #Jason's scores
-        j = Scores()
-        j.score1 = 50
-        j.score2 = 30
-        j.score3 = 65
-        j.score4 = 80
-        j.final_score = 95
-        self.response.write("Jason's final score is " + str(j.final_score))
+        if self.request.GET:
+            s1 = Students()
+            s1.first_name = self.request.GET['s1_first']
+            s1.last_name = (self.request.GET['s1_last'])
+            s1.grade_level = int(self.request.GET['s1_level'])
+            s1.gpa = int(self.request.GET['s1_gpa'])
+            sd.add_student(s1)
 
-        #Vaas' scores
-        v = Scores()
-        v.score1 = 20
-        v.score2 = 45
-        v.score3 = 60
-        v.score4 = 75
-        v.final_score = 80
-        self.response.write("<br /> Vaas' final score is " + str(v.final_score))
+            s2 = Students()
+            s2.first_name = self.request.GET['s2_first']
+            s2.last_name = (self.request.GET['s2_last'])
+            s2.grade_level = int(self.request.GET['s2_level'])
+            s2.gpa = int(self.request.GET['s2_gpa'])
+            sd.add_student(s2)
+
+            s3 = Students()
+            s3.first_name = self.request.GET['s3_first']
+            s3.last_name = (self.request.GET['s3_last'])
+            s3.grade_level = int(self.request.GET['s3_level'])
+            s3.gpa = int(self.request.GET['s3_gpa'])
+            sd.add_student(s1)
+
+            rp.body = (sd.calc_first() + sd.calc_last() +  sd.calc_level() + sd.calc_gpa())
+            self.response.write(rp.print_out())
+
+        else:
+            rp = FormPage()
+            self.response.write(rp.print_out())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

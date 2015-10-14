@@ -6,7 +6,7 @@ Assignment: Reusable Library
 '''
 
 
-class Scores(object): #class for Scores
+class Students(object): #Class for Students
     def __init__(self):
         self.__score1 = 0
         self.__score2 = 0
@@ -62,6 +62,6 @@ class Scores(object): #class for Scores
 
 
 
-class ScoreData(object): #class for Score Data
+class StudentData(object): #Class for StudentData
     def __init__(self):
         pass
