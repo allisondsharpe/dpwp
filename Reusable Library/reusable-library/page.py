@@ -5,18 +5,18 @@ Class: Design Patterns for Web Programming
 Assignment: Reusable Library
 '''
 
-from lib import Scores, ScoreData
+from lib import Students, StudentData
 
 
-class ResultsPage(object): #class for ResultsPage if the user enters in data
+class ResultsPage(object): #Class for ResultsPage if the user enters in data
     def __init__(self):
-        self.title = "Welcome!"
+        self.title = "Student Evaluation"
         self.css = "css/style.css"
         self.head = """
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title> Final Scores! </title>
+        <title> Student Evaluation </title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -32,7 +32,7 @@ class ResultsPage(object): #class for ResultsPage if the user enters in data
         return all
 
 
-class FormPage(object): #form page class for if the user does not enter any data
+class FormPage(object): #Class for FormPage class if the user does not enter any data
     def __init__(self):
         self.title = "Welcome"
         self.css = "css/styles.css"
@@ -41,23 +41,21 @@ class FormPage(object): #form page class for if the user does not enter any data
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Team Stats Calculator</title>
-		<link href="css/styles.css" rel="Stylesheet" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+		<title>Student Evaluation</title>
+		<link href="css/style.css" rel="Stylesheet" type="text/css">
 	</head>
     <body>
         """
         self.body = """
 			<header>
-				<h1>Welcome!</h1>
-				<p> Enter in your information down below! </p>
+				<h1>Student Evaluation</h1>
+				<p> Enter in student's information below. </p>
 			</header>
 			<form>
-			    Name: <input type="text" name="name"><br>
-			    Date: <input type="text" name="date"><br>
-			    Address: <input type="text" name="address"><br>
-			    Phone: <input type="text" name="phone"><br>
+			    First Name: <input type="text" name="first"><br>
+			    Last Name: <input type="text" name="last"><br>
+			    Grade Level: <input type="text" name="level"><br>
+			    GPA: <input type="text" name="gpa"><br>
 				<input type="submit" value="Submit">
 			</form>
         """
