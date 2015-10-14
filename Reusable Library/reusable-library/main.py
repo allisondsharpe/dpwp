@@ -6,8 +6,8 @@ Assignment: Reusable Library
 '''
 
 import webapp2
-from lib import Scores
-from page import Page
+from lib import Scores, ScoreData
+from page import ResultsPage, FormPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):

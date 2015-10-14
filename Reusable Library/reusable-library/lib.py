@@ -5,7 +5,8 @@ Class: Design Patterns for Web Programming
 Assignment: Reusable Library
 '''
 
-class Scores(object):
+
+class Scores(object): #class for Scores
     def __init__(self):
         self.__score1 = 0
         self.__score2 = 0
@@ -58,3 +59,9 @@ class Scores(object):
     def calc_score(self):
         #Calculate final grade
         self.__final_score = (self.__score1 + self.__score2 + self.__score3 + self.__score4 + self.final_score)/5
+
+
+
+class ScoreData(object): #class for Score Data
+    def __init__(self):
+        pass
