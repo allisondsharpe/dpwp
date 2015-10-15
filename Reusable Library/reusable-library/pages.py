@@ -52,7 +52,7 @@ class FormPage(object):
         self.body = """
 			<header>
 				<h1>Arcade Gaming Score Board</h1>
-				<p>Below are five individuals competing for top scores.</p>
+				<p>Enter in five individuals to compete for the highest score.</p>
 			</header>
 			<form>
 				<h2> 1st Competitor </h2>
