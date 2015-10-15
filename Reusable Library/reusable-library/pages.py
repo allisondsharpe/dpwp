@@ -7,19 +7,19 @@ Assignment: Reusable Library
 
 class ResultsPage(object):
     def __init__(self):
-        self.__title = "Scores"
+        self.__title = "The Score Board"
         self.css = "css/style.css"
         self.__head = """
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Arcade Game Scores</title>
+		<title> The Score Board </title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 	</head>
     <body>
 		<header>
-			<h1> Arcade Game Scores</h1>
+			<h1> Arcade Gaming Score Board</h1>
 			<p> Below are five individual people competing for top scores. </p>
 		</header>
         """
@@ -37,129 +37,128 @@ class ResultsPage(object):
 
 class FormPage(object):
     def __init__(self):
-        self.__title = "Scores"
+        self.__title = "The Score Board"
         self.css = "css/style.css"
         self.__head = """
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Arcade Game Scores</title>
+		<title>Arcade Gaming Score Board</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 	</head>
     <body>
         """
         self.body = """
 			<header>
-				<h1>Arcade Game Scores</h1>
+				<h1>Arcade Gaming Score Board</h1>
 				<p>Below are five individuals competing for top scores.</p>
 			</header>
 			<form>
-			    <h2> Competitor #1 </h2>
+				<h2> 1st Competitor </h2>
 				<label>Name:
-				    <input type="text" name="s1_name"></br>
+					<input type="text" name="s1_name"></br>
 				</label>
 				<label>Score #1:
-				    <input type="text" name="s1_score1"></br>
+					<input type="text" name="s1_score1"></br>
 				</label>
 				<label>Score #2:
-				    <input type="text" name="s1_score2"></br>
-			    </label>
+					<input type="text" name="s1_score2"></br>
+				</label>
 				<label>Score #3:
-				    <input type="text" name="s1_score3"></br>
+					<input type="text" name="s1_score3"></br>
 				</label>
 				<label>Score #4:
-				    <input type="text" name="s1_score4"></br>
-			    </label>
+					<input type="text" name="s1_score4"></br>
+				</label>
 				<label>Final Score:
-				    <input type="text" name="s1_final"></br>
+					<input type="text" name="s1_final"></br>
 				</label>
 
-				<h2> Competitor #2 </h2>
+				<h2> 2nd Competitor  </h2>
 				<label>Name:
-				    <input type="text" name="s2_name"></br>
+					<input type="text" name="s2_name"></br>
 				</label>
 				<label>Score #1:
-				    <input type="text" name="s2_score1"></br>
+					<input type="text" name="s2_score1"></br>
 				</label>
 				<label>Score #2:
-				    <input type="text" name="s2_score2"></br>
-			    </label>
+					<input type="text" name="s2_score2"></br>
+				</label>
 				<label>Score #3:
-				    <input type="text" name="s2_score3"></br>
+					<input type="text" name="s2_score3"></br>
 				</label>
 				<label>Score #4:
-				    <input type="text" name="s2_score4"></br>
-			    </label>
+					<input type="text" name="s2_score4"></br>
+				</label>
 				<label>Final Score:
-				    <input type="text" name="s2_final"></br>
+					<input type="text" name="s2_final"></br>
 				</label>
 
-				<h2> Competitor #3 </h2>
+				<h2> 3rd Competitor </h2>
 				<label>Name:
-				    <input type="text" name="s3_name"></br>
+					<input type="text" name="s3_name"></br>
 				</label>
 				<label>Score #1:
-				    <input type="text" name="s3_score1"></br>
+					<input type="text" name="s3_score1"></br>
 				</label>
 				<label>Score #2:
-				    <input type="text" name="s3_score2"></br>
-			    </label>
+					<input type="text" name="s3_score2"></br>
+				</label>
 				<label>Score #3:
-				    <input type="text" name="s3_score3"></br>
+					<input type="text" name="s3_score3"></br>
 				</label>
 				<label>Score #4:
-				    <input type="text" name="s3_score4"></br>
-			    </label>
+					<input type="text" name="s3_score4"></br>
+				</label>
 				<label>Final Score:
-				    <input type="text" name="s3_final"></br>
+					<input type="text" name="s3_final"></br>
 				</label>
 
-				<h2> Competitor #4 </h2>
+				<h2> 4th Competitor </h2>
 				<label>Name:
-				    <input type="text" name="s4_name"></br>
+					<input type="text" name="s4_name"></br>
 				</label>
 				<label>Score #1:
-				    <input type="text" name="s4_score1"></br>
+					<input type="text" name="s4_score1"></br>
 				</label>
 				<label>Score #2:
-				    <input type="text" name="s4_score2"></br>
-			    </label>
+					<input type="text" name="s4_score2"></br>
+				</label>
 				<label>Score #3:
-				    <input type="text" name="s4_score3"></br>
+					<input type="text" name="s4_score3"></br>
 				</label>
 				<label>Score #4:
-				    <input type="text" name="s4_score4"></br>
-			    </label>
+					<input type="text" name="s4_score4"></br>
+				</label>
 				<label>Final Score:
-				    <input type="text" name="s4_final"></br>
+					<input type="text" name="s4_final"></br>
 				</label>
 
-				<h2> Competitor #5 </h2>
+				<h2> 5th Competitor </h2>
 				<label>Name:
-				    <input type="text" name="s5_name"></br>
+					<input type="text" name="s5_name"></br>
 				</label>
 				<label>Score #1:
-				    <input type="text" name="s5_score1"></br>
+					<input type="text" name="s5_score1"></br>
 				</label>
 				<label>Score #2:
-				    <input type="text" name="s5_score2"></br>
-			    </label>
+					<input type="text" name="s5_score2"></br>
+				</label>
 				<label>Score #3:
-				    <input type="text" name="s5_score3"></br>
+					<input type="text" name="s5_score3"></br>
 				</label>
 				<label>Score #4:
-				    <input type="text" name="s5_score4"></br>
-			    </label>
+					<input type="text" name="s5_score4"></br>
+				</label>
 				<label>Final Score:
-				    <input type="text" name="s5_final"></br>
+					<input type="text" name="s5_final"></br>
 				</label>
 
 				<input type="submit" id="submit" value="Submit">
 			</form>
-        """
+	"""
         self.close = """
-		</div>
     </body>
 </html>
         """
