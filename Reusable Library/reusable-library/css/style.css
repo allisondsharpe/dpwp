@@ -1,3 +1,65 @@
+/* Body elements */
 body {
-    background-color: #666;
+  background-color: #8a2be2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header elements */
+header {
+  color: #fff;
+  font-family: "Times New Roman", sans-serif;
+  font-size: 3em;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 5%;
+  text-align: center;
+}
+
+/* h2 elements */
+h2 {
+  color: #fff;
+  display: inline;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 10%;
+}
+
+/* Paragraph elements */
+p {
+  color: #fff;
+  display: inline;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1.35em;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 235%;
+}
+
+/* Form elements */
+form {
+  margin: 6.5% auto;
+  text-align: right;
+  width: 35%;
+}
+
+/* Label elements */
+label {
+  color: #fff;
+  font-family: "Helvetica Neue", "Helvetica",sans-serif;
+  font-size: 1.05em;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  margin-right: 5px;
+}
+
+/* Input elements */
+input {
+  background-color: rgba(255,255,255,0.9);
+  border: 2px solid silver;
+  font-size: 0.8em;
+  margin: 10px 0;
+  padding: 10px 15px;
 }

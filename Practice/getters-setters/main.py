@@ -42,6 +42,7 @@ class Transcript(object):
         self.__final_grade = (self.grade1 + self.grade2 + self.quiz1 + self.quiz2 + self.final_exam)/5
 
 
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
