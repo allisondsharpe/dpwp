@@ -23,7 +23,7 @@ class MainHandler(webapp2.RequestHandler): #MainHandler() class
             s1.score3 = (self.request.GET['s1_score3'])
             s1.score4 = (self.request.GET['s1_score4'])
             s1.final_score = (self.request.GET['s1_final'])
-            s.add_new_competitor(s1) #Adds information for s1 to the ScoreData() class
+            s.add_new_competitor(s1) #Adds information for s5 to the ScoreData() class
 
             s2 = ScoreData() #Instance for s2 created within ScoreData()
             s2.name = self.request.GET['s2_name']
