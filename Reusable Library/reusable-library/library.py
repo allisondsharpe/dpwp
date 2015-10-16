@@ -107,22 +107,6 @@ class ScoreData(object):
             output += "Competitor got a total of " + str(competitor.score4) + " for the fourth round." + "<br />"
         return output
 
-    def calc_final(self):
-        '''
-        calculate final score
-        '''
-        #score
-        score = []
-        for competitor in self.__score_list:
-            score.append(competitor.year)
 
-        print score
-        #sort score from low to high
-        score.sort()
-        print score
-        #subtract the low score from the high score
-        num = len(score) - 1 #length of array
-        span = score[num] - score[0] #last number - first number
-        #return the span of time
-        return "The span between scores entered is " + str(span)
+
 

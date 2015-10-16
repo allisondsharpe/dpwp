@@ -6,14 +6,13 @@ Assignment: Reusable Library
 '''
 
 
-import webapp2
-from library import Scores, ScoreData
-from pages import ResultsPage, FormPage
+import webapp2 #Imports webapp for MainHandler() class
+from library import Scores, ScoreData #Importing class Scores() and class (ScoreData)
+from pages import ResultsPage, FormPage #Importing class ResultsPage() and class FormPage()
 
-class MainHandler(webapp2.RequestHandler):
+class MainHandler(webapp2.RequestHandler): #MainHandler() class
     def get(self):
-        s = Scores()
-        rp = ResultsPage #If the user fills out the forms, the ResultsPage() class will print
+        s = ScoreData() #Instance created for Scores() class
 
         if self.request.GET:
 
@@ -62,12 +61,12 @@ class MainHandler(webapp2.RequestHandler):
             s5.final_score = (self.request.GET['s5_final'])
             s.add_new_competitor(s5)
 
-            rp.body = (s.calc_score1() + s.calc_score2() + s.calc_score3() + s.calc_score4() + s.calc_final())
-            self.response.write(rp.print_out(self))
+            rp = ResultsPage() #Instance created for ResultsPage() class
+            rp.body = s.calc_score1() + s.calc_score2() + s.calc_score3() + s.calc_score4() #Gathering the results in the body from the ResultsPage() class
+            self.response.write(rp.print_out()) #If the user submits data in the forms, then the ResultsPage() class will print
         else:
-            #If the user doesn't submit any data in the forms, then the FormPage() class will print
-            fp = FormPage()
-            self.response.write(fp.print_out())
+            fp = FormPage() #Instance created for FormPage()
+            self.response.write(fp.print_out()) #If the user doesn't submit any data in the forms, then the FormPage() class will print
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
