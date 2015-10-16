@@ -5,71 +5,79 @@ Class: Design Patterns for Web Programming
 Assignment: Reusable Library
 '''
 
-class Scores(object):
+class Scores(object): #Class created for Scores() - Stores data for form inputs
     def __init__(self):
-        self.__name = ''
-        self.__score1 = 0
-        self.__score2 = 0
-        self.__score3 = 0
-        self.__score4 = 0
-        self.__final = 0
+        self.__name = '' #Stores string value for __name attribute
+        self.__score1 = 0 #Stores number value for __score1 attribute
+        self.__score2 = 0 #Stores number value for __score2 attribute
+        self.__score3 = 0 #Stores number value for __score3 attribute
+        self.__score4 = 0 #Stores number value for __score4 attribute
+        self.__final = 0 #Stores number value for __score1 attribute
 
-    #Name getter
+    '''
+    GETTERS
+    '''
+
+    #Name getter used to retrieve value of __name
     @property
     def name(self):
         return self.__name
 
-    #Name setter
-    @name.setter
-    def name(self, rp_name):
-        self.__name = rp_name
-
-    #Score 1 getter
+   #Score 1 getter used to retrieve value of __score1
     @property
     def score1(self):
         return self.__score1
 
-    #Score 1 setter
-    @score1.setter
-    def score1(self, rp_score1):
-        self.__score1 = rp_score1
-
-    #Score 2 getter
+    #Score 2 getter used to retrieve value of __score2
     @property
     def score2(self):
         return self.__score2
 
-    #Score 2 setter
-    @score2.setter
-    def score2(self, rp_score2):
-        self.__score2 = rp_score2
-
-    #Score 3 getter
+    #Score 3 getter used to retrieve value of __score3
     @property
-    def score2(self):
-        return self.__score2
+    def score3(self):
+        return self.__score3
 
-    #Score 3 setter
-    @score2.setter
-    def score2(self, rp_score2):
-        self.__score2 = rp_score2
-
-    #Score 4 getter
+    #Score 4 getter used to retrieve value of __score4
     @property
     def score4(self):
         return self.__score4
 
-    #Score 4 setter
-    @score4.setter
-    def score4(self, rp_score4):
-        self.__score4 = rp_score4
-
-    #Final score getter
+    #Final Score getter used to retrieve value of __final
     @property
     def final(self):
         return self.__final
 
-    #Final score setter
+    '''
+    SETTERS
+    '''
+
+    #Name setter used to retrieve and modify value of __name
+    @name.setter
+    def name(self, rp_name):
+        self.__name = rp_name
+
+    #Score 1 setter used to retrieve and modify value of __score1
+    @score1.setter
+    def score1(self, rp_score1):
+        self.__score1 = rp_score1
+
+    #Score 2 setter used to retrieve and modify value of __score2
+    @score2.setter
+    def score2(self, rp_score2):
+        self.__score2 = rp_score2
+
+    #Score 3 setter used to retrieve and modify value of __score3
+    @score3.setter
+    def score3(self, rp_score3):
+        self.__score3 = rp_score3
+
+    #Score 4 setter used to retrieve and modify value of __score4
+    @score4.setter
+    def score4(self, rp_score4):
+        self.__score4 = rp_score4
+
+    #Score 4 setter used to retrieve and modify value of __score4
     @final.setter
     def final(self, rp_final):
         self.__final = rp_final
