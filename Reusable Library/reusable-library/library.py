@@ -109,12 +109,14 @@ class ScoreData(object): #Class created for ScoreData()
             output += "Competitor " + str(competitor.name) + " got a total of " + str(competitor.score3) + " points for the third round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
         return output #Returns variable output so that it will run in the browser
 
-    def calc_score4(self): #Function for calc_score1
+    def calc_score4(self): #Function for calc_score4
         output = '' #Variable "output" created in order to print the results to the browser
         for competitor in self.__score_list:
             output += "Competitor " + str(competitor.name) + " got a total of " + str(competitor.score4) + " points for the fourth round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
         return output #Returns variable output so that it will run in the browser
 
-
-
-
+    def calc_final(self): #Function for calc_final
+        output = '' #Variable "output" created in order to print the results to the browser
+        for competitor in self.__score_list:
+            output += "Competitor " + str(competitor.name) + " completed the game with a total of " + str(competitor.score4) + " points for the final round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
+        return output #Returns variable output so that it will run in the browser

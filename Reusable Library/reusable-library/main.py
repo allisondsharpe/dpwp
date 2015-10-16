@@ -62,7 +62,7 @@ class MainHandler(webapp2.RequestHandler): #MainHandler() class
             s.add_new_competitor(s5)
 
             rp = ResultsPage() #Instance created for ResultsPage() class - Collects resulting information
-            rp.body = s.calc_score1() + s.calc_score2() + s.calc_score3() + s.calc_score4() #Gathering the results in the body from the ResultsPage() class
+            rp.body = (s.calc_score1() + s.calc_score2() + s.calc_score3() + s.calc_score4() + s.calc_final()) #Gathering the results in the body from the ResultsPage() class
             self.response.write(rp.print_out()) #Prints the ResultsPage() class to the browser
         else:
             fp = FormPage() #Instance created for FormPage() class - Collects user input
