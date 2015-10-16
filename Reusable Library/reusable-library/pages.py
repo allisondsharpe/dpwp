@@ -15,6 +15,7 @@ class ResultsPage(object): #Class for ResultsPage() - Collects resulting informa
 	<head> <!-- Head tag created to store title and css stylesheet link -->
 		<title> The Score Board </title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
+				<script type="text/javascript" src="js/main.js"></script>
 	</head>
     <body>
         <div id="container">
@@ -45,7 +46,7 @@ class FormPage(object): #Class for FormPage() - Collects user input
 	<head>
 		<title> The Score Board </title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
     <body>
         """
