@@ -5,7 +5,7 @@ Class: Design Patterns for Web Programming
 Assignment: Reusable Library
 '''
 
-class ResultsPage(object): #Class for ResultsPage()
+class ResultsPage(object): #Class for ResultsPage() - Collects resulting information
     def __init__(self):
         self.__title = "The Score Board" #Private attribute for self.__title
         self.css = "css/style.css" #Attribute for self.css
@@ -22,10 +22,7 @@ class ResultsPage(object): #Class for ResultsPage()
 			<p> Below are five individual people competing for top scores. </p>
 		</header>
         """
-        self.body = """ <!Enables the form to be printed out to the browser -->
-
-        <script src="js/main.js></script> """ #Javascript file used to validate form fields
-
+        self.body = """ <!-- Enables the self.body tag for the resulting information --> """
         self.close = """ <!-- Stores the closing body and html tags/Footer -->
     </body>
 </html>
@@ -36,10 +33,10 @@ class ResultsPage(object): #Class for ResultsPage()
         return all #Returns variable all
 
 
-class FormPage(object): #Class for FormPage()
+class FormPage(object): #Class for FormPage() - Collects user input
     def __init__(self):
-        self.__title = "The Score Board"
-        self.css = "css/style.css"
+        self.__title = "The Score Board" #Private attribute for self.__title
+        self.css = "css/style.css" #Attribute for self.css
         self.__head = """
 <!DOCTYPE HTML>
 <html>
@@ -50,12 +47,12 @@ class FormPage(object): #Class for FormPage()
     <body>
         """
         self.body = """
-			<header>
+			<header> <!-- Header tag created to store main h1 and paragraph tag -->
 				<h1>Arcade Gaming Score Board</h1>
 				<p>Enter in five individuals to compete for the highest score.</p>
 			</header>
-			<form name="myForm" onsubmit="return validateForm()">
-				<h2> 1st Competitor </h2>
+			<form name="myForm" onsubmit="return validateForm()"> <!-- Form tag created to store user input -->
+				<h2> 1st Competitor </h2> <!-- Contains labels and inputs for name, score 1, score 2, score 3, score 4, and final score for competitor 1 -->
 				<label>Name:
 					<input type="text" name="s1_name"></br>
 				</label>
@@ -75,7 +72,7 @@ class FormPage(object): #Class for FormPage()
 					<input type="text" name="s1_final"></br>
 				</label>
 
-				<h2> 2nd Competitor  </h2>
+				<h2> 2nd Competitor </h2> <!-- Contains labels and inputs for name, score 1, score 2, score 3, score 4, and final score for competitor 2 -->
 				<label>Name:
 					<input type="text" name="s2_name"></br>
 				</label>
@@ -95,7 +92,7 @@ class FormPage(object): #Class for FormPage()
 					<input type="text" name="s2_final"></br>
 				</label>
 
-				<h2> 3rd Competitor </h2>
+				<h2> 3rd Competitor </h2> <!-- Contains labels and inputs for name, score 1, score 2, score 3, score 4, and final score for competitor 3 -->
 				<label>Name:
 					<input type="text" name="s3_name"></br>
 				</label>
@@ -115,7 +112,7 @@ class FormPage(object): #Class for FormPage()
 					<input type="text" name="s3_final"></br>
 				</label>
 
-				<h2> 4th Competitor </h2>
+				<h2> 4th Competitor </h2> <!-- Contains labels and inputs for name, score 1, score 2, score 3, score 4, and final score for competitor 4 -->
 				<label>Name:
 					<input type="text" name="s4_name"></br>
 				</label>
@@ -135,7 +132,7 @@ class FormPage(object): #Class for FormPage()
 					<input type="text" name="s4_final"></br>
 				</label>
 
-				<h2> 5th Competitor </h2>
+				<h2> 5th Competitor </h2> <!-- Contains labels and inputs for name, score 1, score 2, score 3, score 4, and final score for competitor 5 -->
 				<label>Name:
 					<input type="text" name="s5_name"></br>
 				</label>
@@ -155,7 +152,7 @@ class FormPage(object): #Class for FormPage()
 					<input type="text" name="s5_final"></br>
 				</label>
 
-				<input type="submit" id="submit" value="Submit">
+				<input type="submit" id="submit" value="Submit"> <!-- Button created to submit user information -->
 			</form>
 
 			<script src="js/main.js></script> <!-- Javascript file used to validate form fields -->
