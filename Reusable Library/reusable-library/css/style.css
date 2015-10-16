@@ -3,9 +3,23 @@ body {
   background-image: url("images/bg.jpg");
 }
 
+/* Container id elements for ResultsPage() */
+#container {
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.0em;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* Section elements */
+section {
+    margin-bottom: 50px;
+}
+
 /* Header elements */
 header {
-  color: #666;
+  color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 2.5em;
   font-weight: 300;
@@ -14,7 +28,7 @@ header {
 
 /* h2 elements */
 h2 {
-  color: #666;
+  color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 300;
   margin-right: 40px;
@@ -25,10 +39,11 @@ h2 {
 
 /* Paragraph elements */
 p {
-  color: #666;
+  color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.0em;
   font-weight: 100;
+  margin-bottom: 100px;
 }
 
 /* Form elements */
@@ -39,7 +54,7 @@ form {
 
 /* Label elements */
 label {
-  color: #666;
+  color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.0em;
   font-weight: 100;
@@ -64,5 +79,4 @@ input:hover, #submit:hover {
 /* Submit id elements */
 #submit {
     margin-right: 88px;
-    margin-top: 20px;
 }
