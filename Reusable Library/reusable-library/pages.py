@@ -15,14 +15,14 @@ class ResultsPage(object): #Class for ResultsPage() - Collects resulting informa
 	<head> <!-- Head tag created to store title and css stylesheet link -->
 		<title> The Score Board </title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
-				<script type="text/javascript" src="js/main.js"></script>
+
 	</head>
     <body>
-        <div id="container">
-            <header> <!-- Header tag created to store main h1 and paragraph tag -->
-                <h1> Arcade Gaming Score Board</h1>
-                <p> Below are five individual people competing for top scores. </p>
-            </header>
+        <header> <!-- Header tag created to store main h1 and paragraph tag -->
+            <h1> Arcade Gaming Score Board</h1>
+            <p> Below are five individual people competing for top scores. </p>
+        </header>
+        <div id="container"> <!-- Id tag for container -->
         """
         self.body = """ <!-- Enables the self.body tag for the resulting information --> """
         self.close = """ <!-- Stores the closing body and html tags/Footer -->

@@ -23,43 +23,43 @@ class MainHandler(webapp2.RequestHandler): #MainHandler() class
             s1.score3 = (self.request.GET['s1_score3'])
             s1.score4 = (self.request.GET['s1_score4'])
             s1.final_score = (self.request.GET['s1_final'])
-            s.add_new_competitor(s1)
+            s.add_new_competitor(s1) #Adds information for s5 to the ScoreData() class
 
-            s2 = ScoreData()
+            s2 = ScoreData() #Instance for s2 created within ScoreData()
             s2.name = self.request.GET['s2_name']
             s2.score1 = (self.request.GET['s2_score1'])
             s2.score2 = (self.request.GET['s2_score2'])
             s2.score3 = (self.request.GET['s2_score3'])
             s2.score4 = (self.request.GET['s2_score4'])
             s2.final_score = (self.request.GET['s2_final'])
-            s.add_new_competitor(s2)
+            s.add_new_competitor(s2) #Adds information for s2 to the ScoreData() class
 
-            s3 = ScoreData()
+            s3 = ScoreData() #Instance for s3 created within ScoreData()
             s3.name = self.request.GET['s3_name']
             s3.score1 = (self.request.GET['s3_score1'])
             s3.score2 = (self.request.GET['s3_score2'])
             s3.score3 = (self.request.GET['s3_score3'])
             s3.score4 = (self.request.GET['s3_score4'])
             s3.final_score = (self.request.GET['s3_final'])
-            s.add_new_competitor(s3)
+            s.add_new_competitor(s3) #Adds information for s3 to the ScoreData() class
 
-            s4 = ScoreData()
+            s4 = ScoreData() #Instance for s4 created within ScoreData()
             s4.name = self.request.GET['s4_name']
             s4.score1 = (self.request.GET['s4_score1'])
             s4.score2 = (self.request.GET['s4_score2'])
             s4.score3 = (self.request.GET['s4_score3'])
             s4.score4 = (self.request.GET['s4_score4'])
             s4.final_score = (self.request.GET['s4_final'])
-            s.add_new_competitor(s4)
+            s.add_new_competitor(s4) #Adds information for s4 to the ScoreData() class
 
-            s5 = ScoreData()
+            s5 = ScoreData() #Instance for s5 created within ScoreData()
             s5.name = self.request.GET['s5_name']
             s5.score1 = (self.request.GET['s5_score1'])
             s5.score2 = (self.request.GET['s5_score2'])
             s5.score3 = (self.request.GET['s5_score3'])
             s5.score4 = (self.request.GET['s5_score4'])
             s5.final_score = (self.request.GET['s5_final'])
-            s.add_new_competitor(s5)
+            s.add_new_competitor(s5) #Adds information for s5 to the ScoreData() class
 
             rp = ResultsPage() #Instance created for ResultsPage() class - Collects resulting information
             rp.body = (s.calc_score1() + s.calc_score2() + s.calc_score3() + s.calc_score4() + s.calc_final()) #Gathering the results in the body from the ResultsPage() class
