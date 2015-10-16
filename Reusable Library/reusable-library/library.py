@@ -83,37 +83,37 @@ class Scores(object): #Class created for Scores() - Stores data for form inputs
         self.__final = rp_final
 
 
-class ScoreData(object):
+class ScoreData(object): #Class created for ScoreData()
     def __init__(self):
-        self.__score_list = [] #Array for list of scores
+        self.__score_list = [] #Array created for each competitor's scores
 
-    def add_new_competitor(self, rp):
+    def add_new_competitor(self, rp): #Function for add_new_competitor created from main.py
         self.__score_list.append(rp)
-        print rp.name
+        print rp.name #Adds new competitor to the score_list, then prints the name of each competitor
 
-    def calc_score1(self):
-        output = ''
+    def calc_score1(self): #Function for calc_score1
+        output = '' #Variable "output" created in order to print the results to the browser
         for competitor in self.__score_list:
-            output += "Competitor got a total of " + str(competitor.score1) + " for the first round." + "<br />"
-        return output
+            output += "Competitor " + str(competitor.name) + " got a total of " + str(competitor.score1) + " points for the first round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
+        return output #Returns variable output so that it will run in the browser
 
-    def calc_score2(self):
-        output = ''
+    def calc_score2(self): #Function for calc_score2
+        output = '' #Variable "output" created in order to print the results to the browser
         for competitor in self.__score_list:
-            output += "Competitor got a total of " + str(competitor.score2) + " for the second round." + "<br />"
-        return output
+            output += "Competitor " + str(competitor.name) + " got a total of " + str(competitor.score2) + " points for the second round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
+        return output #Returns variable output so that it will run in the browser
 
-    def calc_score3(self):
-        output = ''
+    def calc_score3(self): #Function for calc_score3
+        output = '' #Variable "output" created in order to print the results to the browser
         for competitor in self.__score_list:
-            output += "Competitor got a total of " + str(competitor.score3) + " for the third round." + "<br />"
-        return output
+            output += "Competitor " + str(competitor.name) + " got a total of " + str(competitor.score3) + " points for the third round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
+        return output #Returns variable output so that it will run in the browser
 
-    def calc_score4(self):
-        output = ''
+    def calc_score4(self): #Function for calc_score1
+        output = '' #Variable "output" created in order to print the results to the browser
         for competitor in self.__score_list:
-            output += "Competitor got a total of " + str(competitor.score4) + " for the fourth round." + "<br />"
-        return output
+            output += "Competitor " + str(competitor.name) + " got a total of " + str(competitor.score4) + " points for the fourth round." + "<br />" #Prints the competitor's name and score to the browser using the output variable
+        return output #Returns variable output so that it will run in the browser
 
 
 

@@ -12,12 +12,12 @@ from pages import ResultsPage, FormPage #Importing class ResultsPage() and class
 
 class MainHandler(webapp2.RequestHandler): #MainHandler() class
     def get(self):
-        s = ScoreData() #Instance created for Scores() class
+        s = ScoreData() #Instance created for ScoreData() class
 
         if self.request.GET:
 
-            s1 = ScoreData()
-            s1.name = self.request.GET['s1_name']
+            s1 = ScoreData() #Instance for s1 created within ScoreData()
+            s1.name = self.request.GET['s1_name'] #
             s1.score1 = (self.request.GET['s1_score1'])
             s1.score2 = (self.request.GET['s1_score2'])
             s1.score3 = (self.request.GET['s1_score3'])
@@ -61,12 +61,12 @@ class MainHandler(webapp2.RequestHandler): #MainHandler() class
             s5.final_score = (self.request.GET['s5_final'])
             s.add_new_competitor(s5)
 
-            rp = ResultsPage() #Instance created for ResultsPage() class
+            rp = ResultsPage() #Instance created for ResultsPage() class - Collects resulting information
             rp.body = s.calc_score1() + s.calc_score2() + s.calc_score3() + s.calc_score4() #Gathering the results in the body from the ResultsPage() class
-            self.response.write(rp.print_out()) #If the user submits data in the forms, then the ResultsPage() class will print
+            self.response.write(rp.print_out()) #Prints the ResultsPage() class to the browser
         else:
-            fp = FormPage() #Instance created for FormPage()
-            self.response.write(fp.print_out()) #If the user doesn't submit any data in the forms, then the FormPage() class will print
+            fp = FormPage() #Instance created for FormPage() class - Collects user input
+            self.response.write(fp.print_out()) #Prints the FormPage() class to the browser
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
