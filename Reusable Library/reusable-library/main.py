@@ -17,7 +17,7 @@ class MainHandler(webapp2.RequestHandler): #MainHandler() class
         if self.request.GET:
 
             s1 = ScoreData() #Instance for s1 created within ScoreData()
-            s1.name = self.request.GET['s1_name'] #
+            s1.name = self.request.GET['s1_name']
             s1.score1 = (self.request.GET['s1_score1'])
             s1.score2 = (self.request.GET['s1_score2'])
             s1.score3 = (self.request.GET['s1_score3'])
