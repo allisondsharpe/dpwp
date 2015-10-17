@@ -16,4 +16,4 @@ class Data(object):
 		
 class DataObject(Data):
 	def __init__(self):
-		pass
+		super(Data, self).__init__()

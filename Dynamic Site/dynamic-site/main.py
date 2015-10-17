@@ -12,7 +12,7 @@ from data import Data
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = FormPage()
+        p = ContentPage()
         p.inputs = [['first_name', 'text','First Name'], ['last_name', 'text','Last Name'], ['Submit', 'submit']]
         self.response.write(p.print_out())
 
