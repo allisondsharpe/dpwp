@@ -6,7 +6,7 @@ Assignment: Dynamic Site
 '''
 
 
-class Page(object): #borrowing stuff from the object class
+class Page(object): #Template HTML - Super Class to ContentPage
     def __init__(self):
         self._head = '''
 <!DOCTYPE HTML>
@@ -16,7 +16,7 @@ class Page(object): #borrowing stuff from the object class
     </head>
     <body> '''
 
-        self._body = 'Filler'
+        self._body = ''
         self._close = '''
     </body>
 </html> '''
@@ -24,7 +24,7 @@ class Page(object): #borrowing stuff from the object class
     def print_out(self):
         return self._head + self._body + self._close
 
-class ContentPage(Page): #sub class for Page - Page is super page/parent class to ContentPage
+class ContentPage(Page): #Sub class for Page - Page is super page/parent class to ContentPage - class built for application
     def __init__(self):
         #contructor function for super class/FormPage()
         super(ContentPage, self).__init__() #Page.__init__()
