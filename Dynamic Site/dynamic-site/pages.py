@@ -5,18 +5,20 @@ Class: Design Patterns for Web Programming
 Assignment: Dynamic Site
 '''
 
-
 class Page(object): #Template HTML - Super Class to ContentPage
     def __init__(self):
+        self.__title = "Sharpe's Inc." #Private attribute for self.__title
+        self.css = "css/style.css" #Attribute for self.css
         self._head = '''
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>Sharpe's Inc.</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body> '''
 
-        self._body = ''
+        self._body = 'Hello'
         self._close = '''
     </body>
 </html> '''
@@ -24,7 +26,7 @@ class Page(object): #Template HTML - Super Class to ContentPage
     def print_out(self):
         return self._head + self._body + self._close
 
-class ContentPage(Page): #Sub class for Page - Page is super page/parent class to ContentPage - class built for application
+class ContentPage(Page): #sub class for Page - Page is super page/parent class to ContentPage
     def __init__(self):
         #contructor function for super class/FormPage()
         super(ContentPage, self).__init__() #Page.__init__()
@@ -57,6 +59,5 @@ class ContentPage(Page): #Sub class for Page - Page is super page/parent class t
 
             print self._form_inputs
 
-    #POLYMORPHISM ALERT!!! --------- method overriding
-    def print_out(self):
+    def print_out_form(self):
        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close

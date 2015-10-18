@@ -5,7 +5,6 @@ Class: Design Patterns for Web Programming
 Assignment: Dynamic Site
 '''
 
-
 import webapp2
 from pages import ContentPage
 from data import Data

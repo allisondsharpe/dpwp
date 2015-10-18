@@ -5,9 +5,6 @@ Class: Design Patterns for Web Programming
 Assignment: Dynamic Site
 '''
 
-
-from main import MainHandler
-
 class Data(object):
 	def __init__(self):
 		pass
