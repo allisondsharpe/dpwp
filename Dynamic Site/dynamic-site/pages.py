@@ -5,21 +5,29 @@ Class: Design Patterns for Web Programming
 Assignment: Dynamic Site
 '''
 
-class Page(object): #Template HTML - Super Class to ContentPage
+class Page(object):
     def __init__(self):
-        self.__title = "Sharpe's Inc." #Private attribute for self.__title
-        self.css = "css/style.css" #Attribute for self.css
-        self._head = '''
+        self._head = ''' <!-- self.head will serve as the header -->
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>Sharpe's Inc.</title>
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
-    <body> '''
-
-        self._body = 'Hello'
-        self._close = '''
+    <body>
+        '''
+        self._body = ''' <!-- self.body will contain the page's content/body -->
+        <div id="container">
+            <nav>
+                <li><a href="?nav=home">Home</a></li>
+                <li><a href="?nav=about">About Us</a></li>
+                <li><a href="?nav=careers">Careers</a></li>
+                <li><a href="?nav=faq">FAQ</a></li>
+                <li><a href="?nav=contact">Contact Us</a></li>
+            </nav>
+        '''
+        self._close = ''' <!-- self.close will serve as the footer -->
+        </div>
     </body>
 </html> '''
 
