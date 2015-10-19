@@ -33,7 +33,7 @@ class Page(object):
 
     def print_out(self):
         return self._head + self._body + self._close
-    
+
 
 class ContentPage(Page):
     def __init__(self):

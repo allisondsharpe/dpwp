@@ -5,8 +5,14 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Container id elements */
+#container {
+    background-color: #eee;
+}
+
 /* H1 elements */
 h1, p {
-    color: #fff;
+    color: #000;
 }
+
 
