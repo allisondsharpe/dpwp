@@ -12,10 +12,10 @@ from lib import Lib, LibData
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = ContentPage() #Creates an instance of ContentPage() class from pages.py
+        cp = ContentPage() #Creates an instance of ContentPage() class from pages.py
         d = Data() #Creates an instance of Data() class from data.py
-        l = Lib() #Creates an instance of Lib() class from lib.py
         do = DataObject() #Creates an instance of DataObject() class from data.py
+        l = Lib() #Creates an instance of Lib() class from lib.py
         ld = LibData() #Creates an instance of LibData() class from lib.py
 
         if self.request.GET: #Checking to see if we have user input
@@ -33,14 +33,14 @@ class MainHandler(webapp2.RequestHandler):
         else:
             do = d.objects[0] #User will remain on Home
 
-        p._header_img = do.header_img
-        p._header = do.header
-        p._body = do.body
-        p._footer = do.footer
-        p._current_year = do.current_year
+        cp._header_img = do.header_img
+        cp._header = do.header
+        cp._body = do.body
+        cp._footer = do.footer
+        cp._current_year = do.current_year
 
 
-        self.response.write(p.new_print_out()) #New print_out for pages.py
+        self.response.write(cp.new_print_out()) #New print_out for pages.py
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
