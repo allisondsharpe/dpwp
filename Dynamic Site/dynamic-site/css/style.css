@@ -1,4 +1,12 @@
+/* Body elements */
 body {
     font-family: "Helvetica Neue";
-    background-color: #eee;
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
 }
+
+/* H1 elements */
+h1, p {
+    color: #fff;
+}
+

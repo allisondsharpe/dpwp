@@ -33,16 +33,13 @@ class Page(object):
 
     def print_out(self):
         return self._head + self._body + self._close
+    
 
-#content page is our dynmic html creation class that we populate with info from the data.py file which is sent via the main.py file
 class ContentPage(Page):
     def __init__(self):
-        #since this is a subclass, we have to declare the initializer for the super class it is inheriting from
         super(ContentPage, self).__init__()
-        #for everything below: we create appropriate attributes to set/contain html and data object info and add setters/getters for each so that they can be accessed and changed
 
         self._header_img = ''
-
         @property
         def header_img(self):
             pass
@@ -53,7 +50,6 @@ class ContentPage(Page):
 
 
         self._header = ''
-
         @property
         def header(self):
             pass
@@ -64,7 +60,6 @@ class ContentPage(Page):
 
 
         self._the_body = ''
-
         @property
         def the_body(self):
             pass
@@ -75,7 +70,6 @@ class ContentPage(Page):
 
 
         self._footer = ''
-
         @property
         def footer(self):
             pass
@@ -86,7 +80,6 @@ class ContentPage(Page):
 
 
         self._current_year = 0
-
         @property
         def current_year(self):
             pass
@@ -96,7 +89,6 @@ class ContentPage(Page):
             self._current_year = new_year
 
 
-
     #New print_out function - Will overwrite the first one
     def new_print_out(self):
-        return self._head + self._body + '<img src="' + self._header_img + '" />' + '<h1>' + self._header + '</h1>' + '<h2>' + self._the_body + '</h2>' +  self._footer  +  ' ' + str(self._current_year) + self._close
+        return self._head + self._body + '<img src="' + self._header_img + '" />' + '<h1>' + self._header + '</h1>' + '<p>' + self._the_body + '</p>' +  '<p>' + self._footer  + '</p>' + '<p>' + str(self._current_year) + '</p>' + self._close

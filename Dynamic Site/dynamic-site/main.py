@@ -35,10 +35,9 @@ class MainHandler(webapp2.RequestHandler):
 
         cp._header_img = do.header_img
         cp._header = do.header
-        cp._body = do.body
+        cp._the_body = do.the_body
         cp._footer = do.footer
         cp._current_year = do.current_year
-
 
         self.response.write(cp.new_print_out()) #New print_out for pages.py
 
