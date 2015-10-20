@@ -7,17 +7,18 @@ Assignment: Dynamic Site
 
 class Data(object):
     def __init__(self):
+
         home = DataObject() #Home object instantiated in Data() class for DataObject() class
 
-        home.header_img = ''
-        home.header = 'Welcome'
-        home.the_body = 'Click a Link Above to Get Started'
-        home.footer = 'Copyright'
+        home.nav = 'Home'
+        home.header = "Welcome to the Home Page of Sharpe's Inc."
+        home.the_body = 'To get started, browse our navigational items above.'
+        home.footer = "Copyright Sharpe's Inc."
         home.current_year = 2015
 
         about = DataObject() #About object instantiated in Data() class for DataObject() class
 
-        about.header_img = ''
+        about.nav = 'About'
         about.header = 'Welcome'
         about.the_body = 'Click a Link Above to Get Started'
         about.footer = 'Copyright'
@@ -25,7 +26,7 @@ class Data(object):
 
         careers = DataObject() #Careers object instantiated in Data() class for DataObject() class
 
-        careers.header_img = ''
+        careers.nav = 'Careers'
         careers.header = 'Welcome'
         careers.the_body = 'Click a Link Above to Get Started'
         careers.footer = 'Copyright'
@@ -33,7 +34,7 @@ class Data(object):
 
         faq = DataObject() #FAQ object instantiated in Data() class for DataObject() class
 
-        faq.header_img = ''
+        faq.nav = 'FAQ'
         faq.header = 'Welcome'
         faq.the_body = 'Click a Link Above to Get Started'
         faq.footer = 'Copyright'
@@ -41,7 +42,7 @@ class Data(object):
 
         contact = DataObject() #Contact object instantiated in Data() class for DataObject() class
 
-        contact.header_img = 'images/cat.jpg'
+        contact.nav = 'Contact'
         contact.header = 'Welcome'
         contact.the_body = 'Click a Link Above to Get Started'
         contact.footer = 'Copyright'
@@ -52,7 +53,7 @@ class Data(object):
 
 class DataObject(object): #DataObject() class
     def __init__(self): #Declaring attributes used in Data() class for objects of DataObject()
-        self.header_img = ''
+        self.nav = ''
         self.header = ''
         self.the_body = ''
         self.footer = ''
