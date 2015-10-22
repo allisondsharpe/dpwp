@@ -33,7 +33,7 @@ class MainHandler(webapp2.RequestHandler):
         else:
             do = d.objects[0] #User will remain on Home
 
-        cp._nav = do.nav
+        cp._header_img = do.header_img
         cp._header = do.header
         cp._the_body = do.the_body
         cp._footer = do.footer

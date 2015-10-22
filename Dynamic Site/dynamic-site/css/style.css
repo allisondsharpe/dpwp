@@ -8,11 +8,28 @@ body {
 /* Container id elements */
 #container {
     background-color: #eee;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 20px;
 }
 
 /* H1 elements */
-h1, p {
-    color: #000;
+h1 {
+    color: #666;
+    font-size: 1.6em;
+    font-weight: 300;
 }
 
+/* H2 elements */
+h2 {
+    color: #666;
+    font-size: 1.2em;
+    font-weight: 100;
+}
 
+/* Paragraph elements */
+p {
+    color: #666;
+    font-size: 1.0em;
+    font-weight: 500;
+}

@@ -17,7 +17,13 @@ class Page(object):
     <body>
         '''
         self._body = ''' <!-- self.body will contain the page's content/body -->
-        '''
+                <nav>
+                    <li><a href="?nav=home"> Home </a></li>
+                    <li><a href="?nav=about"> About </a></li>
+                    <li><a href="?nav=careers"> Careers </a></li>
+                    <li><a href="?nav=faq"> FAQ </a></li>
+                    <li><a href="?nav=contact"> Contact </a></li>
+                <nav> '''
         self._close = ''' <!-- self.close will serve as the footer -->
     </body>
 </html> '''
@@ -30,20 +36,21 @@ class ContentPage(Page):
     def __init__(self):
         super(ContentPage, self).__init__()
 
+
         self._div_container_open = '<div id="container">'
         @property
         def div_container_open(self):
             pass
 
 
-        self._nav = ''
+        self._header_img = ''
         @property
-        def nav(self):
+        def header_img(self):
             pass
 
-        @nav.setter
-        def nav(self, new_nav):
-            self._nav = new_nav
+        @header_img.setter
+        def header(self, new_header):
+            self._header = new_header
 
 
         self._header = ''
@@ -56,7 +63,6 @@ class ContentPage(Page):
             self._header = new_header
 
 
-
         self._the_body = ''
         @property
         def the_body(self):
@@ -65,7 +71,6 @@ class ContentPage(Page):
         @the_body.setter
         def the_body(self, new_body):
             self._the_body = new_body
-
 
 
         self._footer = ''
@@ -78,7 +83,6 @@ class ContentPage(Page):
             self._footer = new_footer
 
 
-
         self._current_year = 0
         @property
         def current_year(self):
@@ -89,7 +93,6 @@ class ContentPage(Page):
             self._current_year = new_year
 
 
-
         self._div_container_close = '</div>'
 
         @property
@@ -97,7 +100,6 @@ class ContentPage(Page):
             pass
 
 
-
     #New print_out function - Will overwrite the first one
     def new_print_out(self):
-        return self._head + self._body + self._div_container_open + '<a href="?email=allisonsharpe@ymail.com">' + self._nav + '</a>' + '<h1>' + self._header + '</h1>' + '<p>' + self._the_body + '</p>' +  '<p>' + self._footer  + '</p>' + '<p>' + str(self._current_year) + '</p>'  + self._div_container_close + self._close
+        return self._head + self._body + self._div_container_open + self._header_img + '<h1>' + self._header + '</h1>' + '<h2>' + self._the_body + '</h2>' +  '<p>' + self._footer  + '</p>' + '<p>' + str(self._current_year) + '</p>'  + self._div_container_close + self._close
