@@ -8,8 +8,8 @@ body {
 /* Container id elements */
 #container {
     background-color: #eee;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-right: 250px;
+    margin-left: 250px;
     padding: 20px;
 }
 
@@ -33,3 +33,26 @@ p {
     font-size: 1.0em;
     font-weight: 500;
 }
+
+/* List item elements */
+li {
+    display: inline;
+}
+
+/* Btn class elements */
+.btn {
+	background-color: #fff;
+	border: 1px solid #666;
+	display: inline-block;
+	color: #666;
+	padding: 8px;
+	text-decoration: none;
+	margin-right: 8px;
+}
+
+/* Btn class hover elements */
+.btn:hover {
+	background-color: #eee;
+	color: red;
+}
+
