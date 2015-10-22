@@ -43,7 +43,6 @@ class Data(object):
         contact.footer = "Copyright Sharpe's Inc."
        	contact.current_year = 2015
 
-
         self.objects = [home, about, careers, faq, contact]
 
 class DataObject(object): #DataObject() class
