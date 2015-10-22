@@ -17,13 +17,7 @@ class Page(object):
     <body>
         '''
         self._body = ''' <!-- self.body will contain the page's content/body -->
-                <nav>
-                    <li><a href="?nav=home"> Home </a></li>
-                    <li><a href="?nav=about"> About </a></li>
-                    <li><a href="?nav=careers"> Careers </a></li>
-                    <li><a href="?nav=faq"> FAQ </a></li>
-                    <li><a href="?nav=contact"> Contact </a></li>
-                <nav> '''
+         '''
         self._close = ''' <!-- self.close will serve as the footer -->
     </body>
 </html> '''
@@ -102,4 +96,4 @@ class ContentPage(Page):
 
     #New print_out function - Will overwrite the first one
     def new_print_out(self):
-        return self._head + self._body + self._div_container_open + self._header_img + '<h1>' + self._header + '</h1>' + '<h2>' + self._the_body + '</h2>' +  '<p>' + self._footer  + '</p>' + '<p>' + str(self._current_year) + '</p>'  + self._div_container_close + self._close
+        return self._head + self._body + self._div_container_open + self._header_img + '<nav>' + '<li><a href="?nav=home"> Home </a></li>' + '<li><a href="?nav=about"> About </a></li>' + '<li><a href="?nav=careers"> Careers </a></li>' + '<li><a href="?nav=faq"> FAQ </a></li>' + '<li><a href="?nav=contact"> Contact </a></li>' + '</nav>' + '<h1>' + self._header + '</h1>' + '<h2>' + self._the_body + '</h2>' +  '<p>' + self._footer  + '</p>' + '<p>' + str(self._current_year) + '</p>'  + self._div_container_close + self._close
