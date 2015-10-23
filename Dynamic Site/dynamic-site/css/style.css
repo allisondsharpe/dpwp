@@ -37,9 +37,16 @@ p {
     margin-right: 5px;
 }
 
-/* Copyright id elements */
-#copyright {
-    margin-left: 300px;
+/* Image elements */
+img {
+    width: 850px;
+}
+
+/* Navigational elements */
+nav {
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 20px;
 }
 
 /* List item elements */
@@ -55,7 +62,7 @@ li {
 	color: #666;
 	padding: 8px;
 	text-decoration: none;
-	margin-right: 8px;
+	margin-right: 10px;
 }
 
 /* Btn class hover elements */
@@ -64,3 +71,7 @@ li {
 	color: red;
 }
 
+/* Copyright id elements */
+#copyright {
+    margin-left: 300px;
+}
