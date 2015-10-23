@@ -11,6 +11,7 @@ body {
     margin-right: 250px;
     margin-left: 250px;
     padding: 20px;
+    border: 1px solid #666;
 }
 
 /* H1 elements */
@@ -18,6 +19,8 @@ h1 {
     color: #666;
     font-size: 1.6em;
     font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 /* H2 elements */
@@ -25,7 +28,7 @@ h2 {
     color: #666;
     font-size: 1.2em;
     font-weight: 100;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 /* Paragraph elements */
@@ -40,6 +43,7 @@ p {
 /* Image elements */
 img {
     width: 850px;
+    border: 1px solid #666;
 }
 
 /* Navigational elements */
