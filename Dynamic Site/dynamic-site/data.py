@@ -24,24 +24,25 @@ class Data(object): #Data() class created to contain objects and attributes crea
 
         careers = DataObject() #Careers object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         careers.header_img = ''
-        careers.header = "Would You Be Interested in Working With Us?"
-        careers.the_body = 'We are currently hiring now. If you would like to become apart of our circle please fill out a form within the contact section and let us know!'
+        careers.header = "Join Our Team"
+        careers.the_body = "We are currently hiring now. If you would like to join our team please submit your email in the contact section above and we'll get in touch with you as soon as possible."
         careers.footer = "Copyright Sharpe's Inc."
         careers.current_year = 2015
 
         faq = DataObject() #FAQ object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         faq.header_img = ''
         faq.header = "Welcome to Our FAQ's Page"
-        faq.the_body = 'Q: What does your company do? </br> A: It helps to provide others with..'
+        faq.the_body = 'Q: What does your company do? </br> A: It helps to provide others with.. </br></br> Q: What does your company do? </br> A: It helps to provide others with..'
         faq.footer = "Copyright Sharpe's Inc."
         faq.current_year = 2015
 
-        contact = DataObject() #Contact object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
+        contact = DataObject() #Contact object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, current_year, and input have been created for this object
         contact.header_img = ''
         contact.header = "Want to Contact Us?"
-        contact.the_body = 'Submit your form and a representative will be in touch with you soon.'
+        contact.the_body = 'Submit your email below and a representative will be in touch with you soon.'
         contact.footer = "Copyright Sharpe's Inc."
        	contact.current_year = 2015
+        contact.input = '<form><input type="text" id="input"/><input type="button" value="Submit" id="form_btn"/></form>'
 
         self.objects = [home, about, careers, faq, contact] #Array for 'objects' created to contain each object created within the Data() class
 
@@ -53,3 +54,4 @@ class DataObject(object): #DataObject() class created to contain declarations of
         self.the_body = ''
         self.footer = ''
         self.current_year = 0
+        self.input = ''

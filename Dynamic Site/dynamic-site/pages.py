@@ -84,7 +84,17 @@ class ContentPage(Page): #ContentPage() class created to contain the getters and
         def current_year(self, new_year):
             self._current_year = new_year
 
+        #Getter and setter created for '_input'
+        self._input = ''
+        @property
+        def input(self):
+            pass
+
+        @input.setter
+        def input(self, new_input):
+            self._input = new_input
+
 
     #New print_out function - Will overwrite the first one
     def new_print_out(self): #Polymorphism function - Will return all values that would otherwise be created within the template
-        return self._head + self._body + '<div id="container">' + '<img src="images/header.jpg">' + self._header_img + '<nav>' + '<li><a href="?nav=home" class="btn"> Home </a></li>' + '<li><a href="?nav=about" class="btn"> About </a></li>' + '<li><a href="?nav=careers" class="btn"> Careers </a></li>' + '<li><a href="?nav=faq" class="btn"> FAQ </a></li>' + '<li><a href="?nav=contact" class="btn"> Contact </a></li>' + '</nav>' + '<h1>' + self._header + '</h1>' + '<h2>' + self._the_body + '</h2>' +  '<p id="copyright">' + self._footer + '</p>' + '<p>' + '&copy;' + str(self._current_year) + '</p>'  + '</div>' + self._close
+        return self._head + self._body + '<div id="container">' + '<img src="images/header.jpg">' + self._header_img + '<nav>' + '<li><a href="?nav=home" class="btn"> Home </a></li>' + '<li><a href="?nav=about" class="btn"> About </a></li>' + '<li><a href="?nav=careers" class="btn"> Careers </a></li>' + '<li><a href="?nav=faq" class="btn"> FAQ </a></li>' + '<li><a href="?nav=contact" class="btn"> Contact </a></li>' + '</nav>' + '<h1>' + self._header + '</h1>' + '<h2>' + self._the_body + '</h2>'  + self._input + '<h3 id="copyright">' + self._footer + '&copy;' + str(self._current_year) + '</h3>' + '</div>' + self._close

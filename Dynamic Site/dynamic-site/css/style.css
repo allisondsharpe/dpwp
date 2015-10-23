@@ -31,8 +31,8 @@ h2 {
     margin-bottom: 100px;
 }
 
-/* Paragraph elements */
-p {
+/* H3 elements */
+h3 {
     color: #666;
     font-size: 1.0em;
     font-weight: 500;
@@ -73,6 +73,20 @@ li {
 .btn:hover {
 	background-color: #eee;
 	color: red;
+}
+
+/* Input id elements */
+#input {
+   margin-top: -80px;
+   width: 200px;
+   position: absolute;
+}
+
+/* Form_btn id elements */
+#form_btn {
+    margin-left: 220px;
+    margin-top: -79px;
+    position: absolute;
 }
 
 /* Copyright id elements */

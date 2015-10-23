@@ -35,6 +35,7 @@ class MainHandler(webapp2.RequestHandler): #MainHandler() class = Base class
         cp._the_body = do.the_body #ContentPage() _the_body object created from DataObject() class
         cp._footer = do.footer #ContentPage() _footer object created from DataObject() class
         cp._current_year = do.current_year #ContentPage() _current_year object created from DataObject() class
+        cp._input = do.input #ContentPage() _input object created from DataObject() class
 
         self.response.write(cp.new_print_out()) #New print_out for pages.py
 
