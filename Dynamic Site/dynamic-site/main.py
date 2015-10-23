@@ -8,15 +8,12 @@ Assignment: Dynamic Site
 import webapp2
 from pages import ContentPage
 from data import Data, DataObject
-from lib import Lib, LibData
 
 class MainHandler(webapp2.RequestHandler): #MainHandler() class = Base class
     def get(self):
         cp = ContentPage() #Creates an instance of ContentPage() class from pages.py
         d = Data() #Creates an instance of Data() class from data.py
         do = DataObject() #Creates an instance of DataObject() class from data.py
-        l = Lib() #Creates an instance of Lib() class from lib.py
-        ld = LibData() #Creates an instance of LibData() class from lib.py
 
         if self.request.GET: #Checking to see if we have user input
             nav = self.request.GET['nav'] #Sending a request to get 'nav'
