@@ -18,14 +18,14 @@ class Data(object): #Data() class created to contain objects and attributes crea
         about = DataObject() #About object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         about.header_img = ''
         about.header = "About Sharpe's Inc."
-        about.the_body = "Sharpe's Inc. has been helping people for more than twenty years..."
+        about.the_body = "Sharpe's Inc. is a world wide known franchise and has been around for more than 20 years. "
         about.footer = "Copyright Sharpe's Inc."
         about.current_year = 2015
 
         careers = DataObject() #Careers object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         careers.header_img = ''
         careers.header = "Would You Be Interested in Working With Us?"
-        careers.the_body = 'Submit a form within the contact section and let us know!'
+        careers.the_body = 'We are currently hiring now. If you would like to become apart of our circle please fill out a form within the contact section and let us know!'
         careers.footer = "Copyright Sharpe's Inc."
         careers.current_year = 2015
 
