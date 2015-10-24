@@ -11,14 +11,14 @@ class Data(object): #Data() class created to contain objects and attributes crea
         home = DataObject() #Home object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         home.header_img = ''
         home.header = "Welcome to the Home Page of Sharpe's Inc."
-        home.the_body = 'To get started, browse our navigational items above.'
+        home.the_body = "We appreciate your interest at Sharpe's Inc. To get started, try browsing our navigational items above."
         home.footer = "Copyright Sharpe's Inc."
         home.current_year = 2015
 
         about = DataObject() #About object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         about.header_img = ''
         about.header = "About Sharpe's Inc."
-        about.the_body = "Sharpe's Inc. is a world wide known franchise and has been around for more than 20 years. "
+        about.the_body = "Sharpe's Inc has been around for more than 20 years for assisting clients with their financial instabilities as well as granting individuals with the ability to work in a safe and drug-free environment. "
         about.footer = "Copyright Sharpe's Inc."
         about.current_year = 2015
 
@@ -32,7 +32,7 @@ class Data(object): #Data() class created to contain objects and attributes crea
         faq = DataObject() #FAQ object instantiated in Data() class for DataObject() class - Attributes for header_img, header, the_body, footer, and current_year have been created for this object
         faq.header_img = ''
         faq.header = "Welcome to Our FAQ's Page"
-        faq.the_body = 'Q: What does your company do? </br> A: It helps to provide others with.. </br></br> Q: What does your company do? </br> A: It helps to provide others with..'
+        faq.the_body = "Q: <strong>What are the responsibilities of Sharpe's Inc?</strong> </br> A: We aide our clients with their financial situation and we ensure that everyone gets treated equally and receives the assistance that they deserve.  </br></br> Q: <strong>What should I expect when working for this company?</strong> </br> A: A great atmosphere surrounded by co-workers who enjoy their job and are willing to serve their clients by meeting their needs."
         faq.footer = "Copyright Sharpe's Inc."
         faq.current_year = 2015
 
